@@ -1,4 +1,10 @@
-function calc(a, b) {
-    return a + b;
-}
-console.log(calc(4,5));
+document.querySelectorAll('.videos__item-descr').forEach(item => {
+        item.textContent.trim();
+
+        if(item.textContent.length < 100 ){
+            return;
+        } else {
+            const str = item.textContent.slice(0, 101) + "...";
+            item.textContext = str;
+        }
+    });
